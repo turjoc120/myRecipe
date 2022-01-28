@@ -7,6 +7,7 @@ import HomePage from './Components/Pages/HomePage/HomePage';
 import RecipeDetails from './Components/Pages/RecipeDetails/RecipeDetails';
 import EditRecipe from './Components/Pages/EditRecipe/EditRecipe';
 import AddRecipe from './Components/Pages/AddRecipe/AddRecipe';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path="/recipe/:recipeId" element={<RecipeDetails />} />
         <Route path="/edit-recipe/:recipeId" element={<EditRecipe />} />
       </Routes>
-
+      <Footer></Footer>
     </div>
   );
 }

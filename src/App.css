@@ -6,3 +6,14 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
+/* card effect */
+.card {
+  transition: transform .25s ease-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+

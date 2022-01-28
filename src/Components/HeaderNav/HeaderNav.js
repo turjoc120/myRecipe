@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HeaderNav = () => {
     return (
-        <div>
+        <header>
             <Navbar bg="light" variant="light">
                 <Container>
                     <Navbar.Brand as={Link} to="/" ><img width="50" className='mb-3' src="https://image.flaticon.com/icons/png/512/1116/1116852.png" alt="" /> <span className='fw-bolder fs-4'>YourRecipe</span></Navbar.Brand>
@@ -15,7 +15,7 @@ const HeaderNav = () => {
                     </Nav>
                 </Container>
             </Navbar>
-        </div>
+        </header>
     );
 };
 

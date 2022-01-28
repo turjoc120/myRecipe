@@ -8,7 +8,6 @@ const RecipeCard = ({ recipe }) => {
     const { recipeName, description, _id } = recipe
 
     const deleteRecipe = (id) => {
-
         Swal.fire({
             title: 'Are You Sure ?',
             text: "You won't be able to revert this!",
@@ -30,27 +29,23 @@ const RecipeCard = ({ recipe }) => {
                 })
             }
         })
-
-
     }
 
     return (
-
-        <Col >
-            <Card style={{ width: '18rem' }} className='rounded-2 shadow-sm'>
+        <Col>
+            <Card style={{ width: '18rem', borderRadius: "10px", border: "1px solid #b2b7bf" }} className='shadow-sm h-100'>
                 <Card.Body>
                     <Card.Title>{recipeName}</Card.Title>
                     <Card.Text>
-                        {description?.slice(0, 110) + "...."}
+                        {description?.slice(0, 160) + "...."}
                     </Card.Text>
                     <Link to={`/edit-recipe/${_id}`}>
-                        <Button variant="info" className='me-5 px-4'>Edit <i className="far fa-edit"></i></Button>
+                        <Button variant="outline-primary" className='me-5 px-4'>Edit <i className="far fa-edit"></i></Button>
                     </Link>
-                    <Button onClick={() => deleteRecipe(_id)} variant="danger">Delete <i className="fas fa-trash-alt"></i></Button>
+                    <Button onClick={() => deleteRecipe(_id)} variant="outline-danger">Delete <i className="fas fa-trash-alt"></i></Button>
                     <Link to={`/recipe/${_id}`}>
-                        <Button variant="outline-danger" className="w-100 mt-3">View Details</Button>
+                        <Button variant="info" className="w-100 mt-3">View Details</Button>
                     </Link>
-
                 </Card.Body>
             </Card>
         </Col >
